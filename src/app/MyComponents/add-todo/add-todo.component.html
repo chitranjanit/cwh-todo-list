@@ -1,0 +1,30 @@
+<div class="my-3">
+  <h4>Add a Todo</h4>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group py-1">
+      <label for="title">Todo Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        value=""
+        placeholder="Enter todo"
+        [(ngModel)]="title"
+      />
+    </div>
+    <div class="form-group py-1">
+      <label for="desc">Todo Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="desc"
+        value=""
+        placeholder="Enter Description"
+        [(ngModel)]="desc"
+      />
+    </div>
+    <div class="form-group py-1">
+      <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+  </form>
+</div>

@@ -24,7 +24,7 @@ export class TodosComponent implements OnInit {
         active: true,
       },
       {
-        sno: 1,
+        sno: 3,
         title: 'Tthis is title 3',
         desc: 'Description 3',
         active: true,
@@ -33,4 +33,17 @@ export class TodosComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  deleteTodo(todo: Todo) {
+    this.todos = this.todos.filter((item) => {
+      return item.sno !== todo.sno;
+    });
+  }
+
+  addTodo(todo: Todo) {
+    console.log(todo);
+    if (todo) {
+      this.todos.push(todo);
+    }
+  }
 }
